@@ -1,4 +1,8 @@
+*{
+    box-sizing: border-box;
+}
 
+/* section */
 #header{
     background-color: green;
     height: 100px;
@@ -41,3 +45,58 @@
     color: orange;
     font-size: 25px;
 }
+
+/* MENU */
+.menu{
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+}
+
+.tarjeta-comidas{
+    border: solid 2px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.tarjeta-comidas h1{
+    text-align: center;
+}
+
+.container_opcion_comida{
+    display: flex;
+    gap: 12px;
+    padding: 8px;
+    /* animation: slide 10s linear infinite;
+    -webkit-animation: slide 10s linear infinite;
+    white-space: nowrap; */
+}
+
+.opcion_comida{
+    border: solid 2px;
+    height: auto;
+    width: 450px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 8px;
+}
+
+img{
+    width: 80%;
+    height: 200px;
+}
+
+/* @keyframes slide{
+    0% {
+        transform: translateX(100%);
+    }
+    
+    100% {
+        transform: translateX(-100%);
+    }
+
+    
+} */

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -11,34 +12,35 @@
 
 
 </head>
+
 <body>
 
-<!-- HEADER -->
-<div id="header">
-    <div>   
-    <a href="index.html"><img id="logo" src="../static/styles/LogoRestaurant.jpeg" alt="LogoRestaurant" >
-    </a> 
+    <!-- HEADER -->
+    <div id="header">
+        <div>
+            <a href="index.html"><img id="logo" src="../static/styles/LogoRestaurant.jpeg" alt="LogoRestaurant">
+            </a>
+        </div>
+
+        <div class="enlaces">
+            <a id="link" href="index.html">Inicio</a>
+            <a id="link" href="menu.html">Menú</a>
+            <a id="link" href="registro.html">Registro</a>
+            <a id="link" href="reservas.html">Reservas</a>
+            <a id="link" href="reseñas.html">Reseñas</a>
+        </div>
+
+        <div>
+            <a href="www.instagram.com" target="_blank"><i class="iconos fa-brands fa-instagram"></i></a>
+            <a href="www.facebook.com" target="_blank"><i class="iconos fa-brands fa-facebook"></i></a>
+            <a href="www.twitter.com" target="_blank"><i class="iconos fa-brands fa-twitter"></i></a>
+            <a href="www.linkedin.com" target="_blank"><i class="iconos fa-brands fa-linkedin"></i></a>
+
+
+        </div>
+
+
     </div>
-
-    <div class="enlaces">
-    <a id="link" href="index.html">Inicio</a>
-    <a id="link" href="menu.html">Menú</a>
-    <a id="link" href="registro.html">Registro</a>
-    <a id="link" href="reservas.html">Reservas</a>
-    <a id="link" href="reseñas.html">Reseñas</a>
-    </div>
-
-    <div>
-        <a href="www.instagram.com" target="_blank"><i class="iconos fa-brands fa-instagram"></i></a>
-        <a href="www.facebook.com" target="_blank"><i class="iconos fa-brands fa-facebook"></i></a>
-        <a href="www.twitter.com" target="_blank"><i class="iconos fa-brands fa-twitter"></i></a>
-        <a href="www.linkedin.com" target="_blank"><i class="iconos fa-brands fa-linkedin"></i></a>
-
-
-    </div>
-
-
-</div>
 
 
     <section>
@@ -52,21 +54,21 @@
             </ul>
         </nav>
 
-        
+
     </section>
 
     <section id="menu">
         <a href="menu.html">menu</a>
     </section>
-    
+
     <section id="reseñas">
         <a href="reseñas.html">reseñas</a>
     </section>
-    
+
     <section id="reservas">
         <a href="reservas.html">reservas</a>
     </section>
-    
+
     <section id="registro">
         <a href="registro.html">registro</a>
     </section>
@@ -76,75 +78,221 @@
     <a href="#pastas">pastas</a>
     <br>
     <a href="#picadas-container">picadas</a>
-    
+
     <div id="menu" class="menu">
-     <div id="minutas" class="minutas-container">
-        <div class="---">
-            <h2>---</h2>
-            <p>---</p>
-            <img src="" style="width: 300px; height: 150px;">
+
+        <div id="minutas" class="tarjeta-comidas">
+            <h1>Minutas</h1>
+
+            <div class="container_opcion_comida">
+                <div class="opcion_comida">
+                    <h2>Suprema con guarnición.</h2>
+                    <p>Suprema con guarnicion, estas pueden ser Papas fritas, Pure o ensalada.</p>
+                    <img src="../static/image/suprema.jpeg">
+                </div>
+
+                <div class="opcion_comida">
+                    <h2>Milanesas con guarnición.</h2>
+                    <p>Milanesa de carne de lomo, con papas fritas, pure o ensalada.</p>
+                    <img src="../static/image/milanesa.jpg">
+                </div>
+
+                <div class="opcion_comida">
+                    <h2>Costeleta de carne/cerdo</h2>
+                    <p>Exquisita costeleta de carne o cerdo con guarnición.</p>
+                    <img src="../static/image/costeleta.jpg">
+                </div>
+                
+                <div class="opcion_comida">
+                    <h2>Empanadas</h2>
+                    <p>Deliciosa empanadas de gran variedad a eleccion <br> Carne, jamon y queso, capresse o
+                        matambre.</p>
+                    <img src="../static/image/empanada.jpg">
+                </div>
+                
+                
+            </div>
         </div>
 
-        <div class="---">
-            <h2>---</h2>
-            <p>---</p>
-            <img src="" style="width: 300px; height: 150px;">
+        <div id="pastas" class="tarjeta-comidas">
+            <h1>Pastas</h1>
+
+            <div class="container_opcion_comida">
+
+
+                <div class="opcion_comida">
+                    <h2>Ñoquis</h2>
+                    <p>Ñoquis de papa o verdura con salsa a elección. <br> Filetto, bolognesa, mixta.</p>
+                    <img src="../static/image/ñoquis.jpeg">
+                </div>
+
+                <div class="opcion_comida">
+                    <h2>Sorrentinos</h2>
+                    <p>Sorrentinos de jamon y queso o verdura con salsa a elección. <br> Filetto, bolognesa, mixta.
+                    </p>
+                    <img src="../static/image/sorrentinos.jpg">
+                </div>
+
+                <div class="opcion_comida">
+                    <h2>Tallarines</h2>
+                    <p>Tallarines con salsa a eleccion. <br>Filetto, bolognesa, mixta.</p>
+                    <img src="../static/image/tallarines.jpg">
+                </div>
+
+                <div class="opcion_comida">
+                    <h2>Canelones</h2>
+                    <p>Canelones de verdura y pollo con salsa a elección. <br> Filetto, bolognesa, mixta.</p>
+                    <img src="../static/image/canelones.jpeg">
+                </div>
+
+            </div>
         </div>
 
-        <div class="---">
-            <h2>---</h2>
-            <p>---</p>
-            <img src="" style="width: 300px; height: 150px;">
+        <div id="picadas-container" class="tarjeta-comidas">
+            <h1>Picadas</h1>
+
+            <div class="container_opcion_comida">
+                <div class="opcion_comida">
+                    <h2>Rompe dieta</h2>
+                    <p>Milanesas, papas fritas, albondigas, pollo frito, bastones de mozzarella, rabas y
+                        salsas <strong>(Todo frito).</strong></p>
+                    <img src="../static/image/rompe.jpeg">
+                </div>
+
+                <div class="opcion_comida">
+                    <h2>Tabla de mar</h2>
+                    <p>Cornalitos, rabas, merluza, bastones de muzzarella, langostinos y camarones
+                        fritos.</p>
+                    <img src="../static/image/mar.jpg">
+                </div>
+
+                <div class="opcion_comida">
+                    <h2>Tablas de fiambres</h2>
+                    <p>Queso tybo, mortadela, jamon cocido, jamon crudo, pancitos y aceitunas.</p>
+                    <img src="../static/image/fiambre1.jpeg">
+                </div>
+
+                <div class="opcion_comida">
+                    <h2>Especial de la casa</h2>
+                    <p>Supremas, milanesas, aros de cebolla, bombas de papa, verduritas asadas,
+                        bastones de mozzarella, papas con cheddar y panceta.</p>
+                    <img src="../static/image/de la casa1.jpeg">
+                </div>
+            </div>
         </div>
+
+        <div id="Hamburguesas-container" class="tarjeta-comidas">
+            <h1>Hamburguesa</h1>
+
+            <div class="container_opcion_comida">
+                <div class="opcion_comida">
+                    <h2>Tasty Doble XL</h2>
+                    <p>Medallon de carne, con salsa Tasty, tomate, lechuga y fetas de queso.
+                    </p>
+                    <img src="../static/image/tasty.jpeg">
+                </div>
+
+
+                <div class="opcion_comida">
+                    <h2>Hamburguesa de cheddar</h2>
+                    <p>Medallon de carne o de pollo con tomate, cheddar, panceta y aderezos.
+                    </p>
+                    <img src="../static/image/cheddar.jpg">
+                </div>
+
+
+                <div class="opcion_comida">
+                    <h2>Cebolla crispy</h2>
+                    <p>Medallon de carne con exquisita cebolla crispy, cheddar y mucho
+                        queso.</p>
+                    <img src="../static/image/cebolla.jpg">
+                </div>
+
+                <div class="opcion_comida">
+                    <h2>Hamburguesa de pollo</h2>
+                    <p>Medallon de pollo con todo a eleccion, tomate, lechuga, cebolla y
+                        lo que le quieras agregar.</p>
+                    <img src="../static/image/pollo.jpg">
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="Carnes/cortes-container" class="tarjeta-comidas">
+            <h1>Carnes</h1>
+            <div class="container_opcion_comida">
+                <div class="opcion_comida">
+                    <h2>Lomo al champignone</h2>
+                    <p>Lomo con salsa de champignone con papas fritas o pure.</p>
+                    <img src="../static/image/lomo.jpg">
+                </div>
+
+
+                <div class="opcion_comida">
+                    <h2>Matambre a la pizza</h2>
+                    <p>Matambre de cerdo a la pizza napolitana, con porción de
+                        papas fritas.</p>
+                    <img src="../static/image/matambre.jpg">
+                </div>
+
+
+                <div class="opcion_comida">
+                    <h2>Parrillada completa</h2>
+                    <p>Riñon, molleja, chinchulin, chorizo, morcilla</p>
+                    <img src="../static/image/parrillada.jpg">
+                </div>
+
+                <div class="opcion_comida">
+                    <h2>Asado a la estaca</h2>
+                    <p>Exquisitas porciones de carne asada con guarnición de
+                        papas fritas.</p>
+                    <img src="../static/image/asado.jpeg">
+                </div>
+
+                
+            </div>
+        </div>
+
+        <div id="Pizzas-container" class="tarjeta-comidas">
+            <h1>Pizza</h1>
+
+            <div class="container_opcion_comida">
+                <div class="opcion_comida">
+                    <h2>Doble muzzarella</h2>
+                    <p>Pizza crocante con mucha salsa, muzzarella y
+                        oregano.</p>
+                    <img src="../static/image/muzza.jpg">
+                </div>
+
+
+                <div class="opcion_comida">
+                    <h2>Especial</h2>
+                    <p>Pizza doble masa, con salsa, muzzarella,
+                        jamon y pimiento.</p>
+                    <img src="../static/image/especial.jpg">
+                </div>
+
+
+                <div class="opcion_comida">
+                    <h2>Fugazzeta</h2>
+                    <p>Exquisita pizza con mucha cebolla
+                        caramelizada y muzzarella.</p>
+                    <img src="../static/image/fugazza.jpg">
+                </div>
+
+                <div class="opcion_comida">
+                    <h2>Napolitana</h2>
+                    <p>Pizza con salsa de tomate, muzza, jamon,
+                        tomate y ajo.</p>
+                    <img src="../static/image/napolitana.jpeg">
+                </div>
+            </div>
+        </div>
+
+
+        <script src='main.js'></script>
     </div>
-
-    <div id="pastas" class="pastas-container">
-        <div>
-            <div class="---">
-                <h2>---</h2>
-                <p>---</p>
-                <img src="" style="width: 300px; height: 150px;">
-        </div>
-
-        <div>
-            <div class="---">
-                <h2>---</h2>
-                <p>---</p>
-                <img src="" style="width: 300px; height: 150px;">
-        </div>
-
-        <div>
-            <div class="---">
-                <h2>---</h2>
-                <p>---</p>
-                <img src="" style="width: 300px; height: 150px;">
-        </div>
-    </div>
-
-    <div id="picadas-container" class="picadas-container">
-        <div>
-            <div class="---">
-                <h2>---</h2>
-                <p>---</p>
-                <img src="" style="width: 300px; height: 150px;">
-        </div>
-
-        <div>
-            <div class="---">
-                <h2>---</h2>
-                <p>---</p>
-                <img src="" style="width: 300px; height: 150px;">
-        </div>
-        
-        <div>
-            <div class="---">
-                <h2>---</h2>
-                <p>---</p>
-                <img src="" style="width: 300px; height: 150px;">
-        </div>
-    </div>
-
-
-    <script src='main.js'></script>
 </body>
+
 </html>
