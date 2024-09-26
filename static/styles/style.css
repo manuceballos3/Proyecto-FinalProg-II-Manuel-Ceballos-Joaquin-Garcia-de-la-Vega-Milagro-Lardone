@@ -5,22 +5,34 @@
 /* section */
 #header{
     background-color: green;
-    height: 100px;
-    width: auto;
+    height: auto;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 30px;
 }
 
+#footer{
+    background-color: green;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 10px 30px;
+    margin: 8px 0px;
+}
+
 #logo{
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     border-radius: 100px;
 }
 
 #link{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     color: #fff;
     text-transform: uppercase;
@@ -82,11 +94,29 @@
     align-items: center;
     flex-direction: column;
     padding: 8px;
+    transition: all 0.3s;
+}
+
+.opcion_comida:hover{
+    border: solid 2px orange;
+    cursor: pointer;
 }
 
 img{
     width: 80%;
     height: 200px;
+}
+
+#filtro{
+    height: 50px;
+    width: 1fr;
+    background-color: rgb(180, 180, 180);
+    padding: 8px;
+    margin: 8px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: solid 2px black;
 }
 
 /* @keyframes slide{
