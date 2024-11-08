@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+
 }
 
 /* section */
@@ -97,9 +98,6 @@
     display: flex;
     gap: 12px;
     padding: 8px;
-    /* animation: slide 10s linear infinite;
-    -webkit-animation: slide 10s linear infinite;
-    white-space: nowrap; */
 }
 
 .opcion_comida{
@@ -136,14 +134,53 @@ img{
     border: solid 2px black;
 }
 
-/* @keyframes slide{
-    0% {
-        transform: translateX(100%);
-    }
-    
-    100% {
-        transform: translateX(-100%);
-    }
+/* formulario */
 
-    
-} */
+.registro-completo{
+    font-family: 'montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150vh;
+    background-image: url(/static/image/rest4.jpg);
+    background-size: cover;
+}
+
+.container-form{
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
+    height: 500px;
+    max-width: 900px;
+    transition: all is ease;
+    margin: 10px;
+}
+
+.informacion{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: #c7eef3;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.info_childs{
+    width: 100%;
+    padding: 0 30px;
+}
+
+.info_childs h2{
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.info_childs p{
+    margin: 15px 0;
+    color: #555;
+}
+
+.info_childs input{
+
+}
