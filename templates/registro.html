@@ -40,13 +40,15 @@
             <a href="www.linkedin.com" target="_blank"><i class="iconos fa-brands fa-linkedin"></i></a>
         </div>
     </div>
+
     <div class="registro-completo">
-        <div class="container-form">
+
+        <div class="container-form registro">
             <div class="informacion">
                 <div class="info_childs">
                     <h2>Bienvenido</h2>
                     <p>Para unirte a nuestra comunidad por favor inicia sesion con tus datos</p>
-                    <input type="button" value="iniciar sesion">
+                    <input type="button" value="iniciar sesion" id="sign-in">
                 </div>
             </div>
             <div class="form-informacion">
@@ -58,26 +60,80 @@
                         <i class='bx bxl-linkedin'></i>
                     </div>
                     <p>O usa tu email para registrarte</p>
-                    <form class="form">
-                        <label>
-                            <i class='bx bx-user'></i>
-                            <input type="text" placeholder="Nombres completo">
-                        </label>
-                        <label>
-                            <i class='bx bx-envelope'></i>
-                            <input type="email" placeholder="correo electronico">
-                        </label>
-                        <label>
-                            <i class='bx bx-lock-alt'></i>
-                            <input type="password" placeholder="Contraseña">
-                        </label>
+                    <form class="form form-registro" novalidate>
+                        <div>
+                            <label>
+                                <i class='bx bx-user'></i>
+                                <input type="text" placeholder="Nombre Usuario" name="userName">
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <i class='bx bx-envelope'></i>
+                                <input type="email" placeholder="correo electronico" name="userEmail">
+                            </label>
+
+                        </div>
+                        <div>
+                            <label>
+                                <i class='bx bx-lock-alt'></i>
+                                <input type="password" placeholder="Contraseña" name="userpassword">
+                            </label>
+                        </div>
                         <input type="submit" value="Registrarse">
+                        <div class="alerta-error">Todos los campos son obligatorios</div>
+                        <div class="alerta-exito">Iniciaste sesion correctamente</div>
                     </form>
                 </div>
+            </div>
+        </div>
 
+
+
+
+
+
+
+        <div class="container-form login hide ">
+            <div class="informacion">
+                <div class="info_childs">
+                    <h2>Bienvenido nuevamente!</h2>
+                    <p>Para unirte a nuestra comunidad por favor inicia sesion con tus datos</p>
+                    <input type="button" value="registrarse" id="sign-up">
+                </div>
+            </div>
+            <div class="form-informacion">
+                <div class="form-informacion-childs">
+                    <h2>Iniciar sesion</h2>
+                    <div class="icons">
+                        <i class='bx bxl-google'></i>
+                        <i class='bx bxl-github'></i>
+                        <i class='bx bxl-linkedin'></i>
+                    </div>
+                    <p>O iniciar sesion con una cuenta</p>
+                    <form class="form form-login" novalidate>
+                        <div>
+                            <label>
+                                <i class='bx bx-envelope'></i>
+                                <input type="email" placeholder="correo electronico" name="userpassword">
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <i class='bx bx-lock-alt'></i>
+                                <input type="password" placeholder="Contraseña" name="userpassword">
+                            </label>
+                        </div>
+                        <input type="submit" value="Iniciar sesion">
+                        <div class="alerta-error">Todos los campos son obligatorios</div>
+                        <div class="alerta-exito">Iniciaste sesion correctamente</div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
+
+
 
 
     <a href="index.html">Volver</a>
@@ -107,20 +163,3 @@
 </body>
 
 </html>
-
-<!-- <h1>registro</h1>
-<div class="registro-container">
-    <p>Ingrese su nombre:</p>
-    <input type="text" placeholder="Ingrese su nombre...">
-    <br>
-    <p>Ingrese su apellido</p>
-    <input type="text" placeholder="Nombre...">
-    <br>
-    <pr>Ingrese su email:</pr>
-    <input type="email" placeholder="ejemplo@ejemplo.com">
-    <br>
-    <p>Ingrese su numero</p>
-    <input type="number" placeholder="---">
-    <br>
-    <input type="button" value="Enviar">
-    <br> -->

@@ -172,7 +172,7 @@ img{
 }
 
 .info_childs h2{
-    font-size: 2.5rem;
+    font-size: 40px;
     color: #333;
 }
 
@@ -215,7 +215,7 @@ transition: background-color .3s ease;
 
 .form-informacion-childs h2{
     color: #333;
-    font-size: 2rem;
+    font-size: 32px;
 }
 
 .form-informacion-childs p{
@@ -281,6 +281,48 @@ transition: background-color .3s ease;
     background-color: #7a7a9a;
 }
 
+.hide{
+    position: absolute;
+    transform: translateY(-300%);
+}
+
+/* PERSONALIZACION DE ALERTAS */
+
+.form div .alerta{
+    width: 290px;
+    text-align: left;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    font-size: .8rem;
+}
+
+.form > .alerta-error,
+.form > .alerta-exito{
+    display: none;
+}
+
+.form .alertaError{
+    display: block;
+    background-color: #F66060;
+    padding: .5rem 1rem;
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: .8rem;
+}
+
+.form .alertaExito{
+    display: block;
+    background-color: #0ca828;
+    padding: .5rem 1rem;
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: .8rem;
+}
+
+.form .error{
+    outline: solid 2px #9d2222;
+}
+
 /* responsive form */
 @media screen and (max-width:750px){
     html{
@@ -289,7 +331,7 @@ transition: background-color .3s ease;
 }
 @media screen and (max-width:500px){
     html{
-        font-size: 10px;
+        font-size: 15px;
     }
 
     .container-form{
