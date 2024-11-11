@@ -8,7 +8,6 @@
     <link rel='stylesheet' type='text/css' media='screen' href="../static/styles/style.css">
     <link rel="shortcut icon" href="../static/image/LogoRestaurant.jpeg">
     <script src="https://kit.fontawesome.com/f08f817e21.js" crossorigin="anonymous"></script>
-    <script src='main.js'></script>
 </head>
 <body>
 
@@ -39,14 +38,28 @@
 
 </div>
 
-    <h1>Reseñas</h1>
-    <h2>¡Nos encantaría saber tu opinión! Dejanos una reseña y contanos qué te pareció nuestro restaurante.</h2>
-
-    <textarea style="width: 100%; width: 150px" placeholder="Escriba su reseña..."></textarea>
-    <!--<input type="text" placeholder="Escriba su mensaje..." style="width: 100%; width: 150px">--> 
-    <br>
-    <a href="index.html">Volver</a>
-
+<div class="contenedor-centrado">
+    <div class="container">
+        <h2>¡Nos encantaría saber tu opinión! Dejanos una reseña y contanos qué te pareció nuestro restaurante.</h2>
+        <div class="valuacion">
+            <span id="valuacion">0</span>/5
+        </div>
+        <div class="estrellas" id="estrellas">
+            <span class="estrella" data-value="1">★</span>
+            <span class="estrella" data-value="2">★</span>
+            <span class="estrella" data-value="3">★</span>
+            <span class="estrella" data-value="4">★</span>
+            <span class="estrella" data-value="5">★</span>
+        </div>
+        <p>Compártenos tu reseña:</p>
+        <textarea id="reseña"
+            placeholder="Escribí tu reseña acá">
+        </textarea>
+        <button id="enviar">Enviar</button>
+        <div class="reseñas" id="reseñas">
+        </div>
+    </div>
+</div>
 
 <!-- FOOTER -->
 <div id="footer">
@@ -67,5 +80,6 @@
     </div>
 
  </div>
+ <script src='../static/src/reseña.js'></script>
 </body>
 </html>
