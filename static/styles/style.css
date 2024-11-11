@@ -354,3 +354,98 @@ transition: background-color .3s ease;
         border-top-right-radius: 0;
     }
 }
+
+/* ESPACIO RESERVADO PARA SISTEMA DE RESEÑAS */
+
+.contenedor-centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f2f2f2; /* Fondo para un mejor contraste */
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 400px;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.valuacion {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.estrellas {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.estrella {
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.uno {
+    color: rgb(255, 0, 0);
+}
+
+.dos {
+    color: rgb(255, 106, 0);
+}
+
+.tres {
+    color: rgb(251, 255, 120);
+}
+
+.cuatro {
+    color: rgb(255, 255, 0);
+}
+
+.cinco {
+    color: rgb(24, 159, 14);
+}
+
+textarea {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.reseñas {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.reseña {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.reseña p {
+    margin: 0;
+}
