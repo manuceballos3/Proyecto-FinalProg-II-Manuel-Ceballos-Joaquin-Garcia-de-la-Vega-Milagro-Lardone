@@ -5,15 +5,13 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Registro</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href="../static/styles/style.css">
-    <link rel="shortcut icon" href="../static/image/LogoRestaurant.jpeg">
-    <script src="https://kit.fontawesome.com/f08f817e21.js" crossorigin="anonymous"></script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src='main.js'></script>
+    
+    <link rel="stylesheet" href="../static/styles/style.css">
 </head>
 
 <body>
@@ -28,6 +26,7 @@
         <div class="enlaces">
             <a id="link" href="index.html">Inicio</a>
             <a id="link" href="menu.html">Menú</a>
+            <!-- <a id="link" href="{{ url_for('registro') }}">Registro</a> -->
             <a id="link" href="registro.html">Registro</a>
             <a id="link" href="reservas.html">Reservas</a>
             <a id="link" href="reseñas.html">Reseñas</a>
@@ -43,102 +42,96 @@
 
     <div class="registro-completo">
 
-        <div class="container-form registro">
-            <div class="informacion">
-                <div class="info_childs">
+        <div class="container-form register">
+            <div class="information">
+                <div class="info-childs">
                     <h2>Bienvenido</h2>
-                    <p>Para unirte a nuestra comunidad por favor inicia sesion con tus datos</p>
-                    <input type="button" value="iniciar sesion" id="sign-in">
+                    <p>Para unirte a nuestra comunidad por favor Inicia Sesión con tus datos</p>
+                    <input type="button" value="Iniciar Sesión" id="sign-in">
                 </div>
             </div>
-            <div class="form-informacion">
-                <div class="form-informacion-childs">
-                    <h2>crear una cuenta</h2>
+            <div class="form-information">
+                <div class="form-information-childs">
+                    <h2>Crear una Cuenta</h2>
                     <div class="icons">
                         <i class='bx bxl-google'></i>
-                        <i class='bx bxl-github'></i>
-                        <i class='bx bxl-linkedin'></i>
+                        <i class='bx bxl-facebook'></i>
                     </div>
-                    <p>O usa tu email para registrarte</p>
-                    <form class="form form-registro" novalidate>
+                    <p>o usa tu email para registrarte</p>
+                    <form class="form form-register" novalidate>
                         <div>
                             <label>
-                                <i class='bx bx-user'></i>
-                                <input type="text" placeholder="Nombre Usuario" name="userName">
+                                <i class='bx bx-user' ></i>
+                                <input type="text" placeholder="Nombre Usuario" name="userName" >
                             </label>
                         </div>
                         <div>
-                            <label>
-                                <i class='bx bx-envelope'></i>
-                                <input type="email" placeholder="correo electronico" name="userEmail">
-                            </label>
-
-                        </div>
-                        <div>
-                            <label>
-                                <i class='bx bx-lock-alt'></i>
-                                <input type="password" placeholder="Contraseña" name="userpassword">
+                            <label >
+                                <i class='bx bx-envelope' ></i>
+                                <input type="email" placeholder="Correo Electronico" name="userEmail" >
                             </label>
                         </div>
+                       <div>
+                            <label>
+                                <i class='bx bx-lock-alt' ></i>
+                                <input type="password" placeholder="Contraseña" name="userPassword">
+                            </label>
+                       </div>
+                       
                         <input type="submit" value="Registrarse">
                         <div class="alerta-error">Todos los campos son obligatorios</div>
-                        <div class="alerta-exito">Iniciaste sesion correctamente</div>
+                        <div class="alerta-exito">Te registraste correctamente</div>
                     </form>
                 </div>
             </div>
         </div>
-
-
-
-
-
-
-
-        <div class="container-form login hide ">
-            <div class="informacion">
-                <div class="info_childs">
-                    <h2>Bienvenido nuevamente!</h2>
-                    <p>Para unirte a nuestra comunidad por favor inicia sesion con tus datos</p>
-                    <input type="button" value="registrarse" id="sign-up">
+        
+        
+        
+        <div class="container-form login hide">
+            <div class="information">
+                <div class="info-childs">
+                    <h2>¡¡Bienvenido nuevamente!!</h2>
+                    <p>Para unirte a nuestra comunidad por favor Inicia Sesión con tus datos</p>
+                    <input type="button" value="Registrarse" id="sign-up">
                 </div>
             </div>
-            <div class="form-informacion">
-                <div class="form-informacion-childs">
-                    <h2>Iniciar sesion</h2>
+            <div class="form-information">
+                <div class="form-information-childs">
+                    <h2>Iniciar Sesión</h2>
                     <div class="icons">
                         <i class='bx bxl-google'></i>
-                        <i class='bx bxl-github'></i>
-                        <i class='bx bxl-linkedin'></i>
+                        <i class='bx bxl-facebook'></i>
                     </div>
-                    <p>O iniciar sesion con una cuenta</p>
+                    <p>o Iniciar Sesión con una cuenta</p>
                     <form class="form form-login" novalidate>
                         <div>
-                            <label>
-                                <i class='bx bx-envelope'></i>
-                                <input type="email" placeholder="correo electronico" name="userpassword">
+                            <label >
+                                <i class='bx bx-envelope' ></i>
+                                <input type="email" placeholder="Correo Electronico" name="userEmail">
                             </label>
                         </div>
                         <div>
                             <label>
-                                <i class='bx bx-lock-alt'></i>
-                                <input type="password" placeholder="Contraseña" name="userpassword">
+                                <i class='bx bx-lock-alt' ></i>
+                                <input type="password" placeholder="Contraseña" name="userPassword">
                             </label>
                         </div>
-                        <input type="submit" value="Iniciar sesion">
+                        <input type="submit" value="Iniciar Sesión">
                         <div class="alerta-error">Todos los campos son obligatorios</div>
-                        <div class="alerta-exito">Iniciaste sesion correctamente</div>
+                        <div class="alerta-exito">Iniciaste sesión correctamente</div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-
-
-    <a href="index.html">Volver</a>
-
+    <a href="index.html">Volver a la pagina pricipal</a>
+    
+    
+    
     <!-- FOOTER -->
     <div id="footer">
-
+        
         <div class="enlaces">
             <a id="link" href="index.html">Inicio</a>
             <a id="link" href="menu.html">Menú</a>
@@ -156,8 +149,9 @@
 
     </div>
     <script src="/static/src/script.js"></script>
-    <script src="/static/src/registro.js"></script>
-    <script src="/static/src/login.js"></script>
+    <script src="/static/src/registro.js" type="module"></script>
+    <script src="/static/src/login.js" type="module"></script>
+    <script src="/static/src/iffe_login.js"></script>
 </body>
 
 </html>

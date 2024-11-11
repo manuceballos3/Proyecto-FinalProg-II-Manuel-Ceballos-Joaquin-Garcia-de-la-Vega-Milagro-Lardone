@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Bienvenido</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='image/LogoRestaurant.jpeg') }}">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div id="header">
+        <div>
+            <a href="{{ url_for('index') }}"><img id="logo" src="{{ url_for('static', filename='image/LogoRestaurant.jpeg') }}" alt="Logo"></a>
+        </div>
+        <div class="enlaces">
+            <a href="{{ url_for('index') }}">Inicio</a>
+            <a href="{{ url_for('menu') }}">Menú</a>
+            <a href="{{ url_for('reservas') }}">Reservas</a>
+            <a href="{{ url_for('resenas') }}">Reseñas</a>
+            <a href="{{ url_for('login') }}">Cerrar sesión</a>
+        </div>
+    </div>
+
+    <!-- CONTENIDO DEL DASHBOARD -->
+    <div class="dashboard-container">
+        <h1>Bienvenido, {{ current_user.username }}!</h1> <!-- Muestra el nombre de usuario -->
+        <p>Esta es tu página de inicio. Aquí puedes ver tu perfil, realizar reservas o explorar el menú.</p>
+
+        <h2>Opciones disponibles:</h2>
+        <ul>
+            <li><a href="{{ url_for('menu') }}">Ver el menú</a></li>
+            <li><a href="{{ url_for('reservas') }}">Hacer una reserva</a></li>
+            <li><a href="{{ url_for('resenas') }}">Ver reseñas</a></li>
+            <li><a href="{{ url_for('logout') }}">Cerrar sesión</a></li>
+        </ul>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer">
+        <div class="enlaces">
+            <a href="{{ url_for('index') }}">Inicio</a>
+            <a href="{{ url_for('menu') }}">Menú</a>
+            <a href="{{ url_for('reservas') }}">Reservas</a>
+            <a href="{{ url_for('resenas') }}">Reseñas</a>
+        </div>
+        <div>
+            <a href="https://www.instagram.com" target="_blank"><i class="iconos fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="iconos fa-brands fa-facebook"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="iconos fa-brands fa-twitter"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="iconos fa-brands fa-linkedin"></i></a>
+        </div>
+    </div>
+</body>
+
+</html>
