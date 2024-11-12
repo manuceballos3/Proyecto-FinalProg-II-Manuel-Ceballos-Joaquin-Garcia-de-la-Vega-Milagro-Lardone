@@ -6,16 +6,20 @@ const alertaError = document.querySelector(".form-register .alerta-error");
 const alertaExito = document.querySelector(".form-register .alerta-exito");
 const usuariosGuardados = JSON.parse(localStorage.getItem("registro")) || [];
 
+// Se definen tres expresiones regulares para validar los campos de entrada
 const userNameRegex = /^[a-zA-Z0-9\_\-]{4,16}$/;
 export const emailRegex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
 export const passwordRegex = /^.{4,12}$/;
 
+// mantiene el estado de validacion de los campos, verifica que cada campo sea valido
 export const estadoValidacionCampos = {
   userName: false,
   userEmail: false,
   userPassword: false,
 };
 
+// Se añade un listener para el evento submit del formulario, el cual previene el comportamiento por defecto (envío del formulario) y llama a la función enviarFormulario.
+// funcion para validar cada ccampo cuando el usuario empieza a escribir
 document.addEventListener("DOMContentLoaded", () => {
   formRegister.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -35,6 +39,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+// valida un campo en particular, utilizando  una expresion regular, el campo que se va a validar y  muestra un mensaje por si falla
+
+// si la validacion es correcta se elimina cualquier alerta previa
+
+// si la validacion falla 
+// se marca el campo como invalido, se agrrega la clase error, se muestra el mensaje de error
+
+// eliminarAlerta(): Elimina cualquier alerta que esté actualmente visible en el campo.
+// mostrarAlerta(): Muestra el mensaje de error cuando la validación falla.
 export function validarCampo(regularExpresion, campo, mensaje) {
   const validarCampo= regularExpresion.test(campo.value);
   if (validarCampo) {
@@ -55,13 +69,17 @@ function mostrarAlerta(referencia,mensaje) {
   alertaDiv.textContent = mensaje;
   referencia.appendChild(alertaDiv);
 }
-
+// Busca una alerta existente dentro de la referencia y la elimina si la encuentra. 
 function eliminarAlerta(referencia) {
   const alerta = referencia.querySelector(".alerta");
 
   if (alerta) alerta.remove();
 }
 
+
+// Esta función se encarga de validar si todos los campos del formulario son válidos antes de enviarlo
+//  si todos los campos son validos se limpia el formulario con el reset, se muestar una alerta de exito y se oculta el error 
+// sihay campos invalidos se oculta cualquier alerta de exito 
 export function enviarFormulario(form, alertaError,alertaExito) {
   //VALIDAMOS EL ENVIO DE NUESTRO FORMULARIO
   console.log("chau")

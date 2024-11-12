@@ -1,3 +1,5 @@
+//se utilizaun iife, la funcion se ejecuta inmediatamente despues de ser definida, de esta forma evitamos problemas con variables globales
+
 (function () {
     
   const formLogin = document.querySelector(".form-login");
@@ -7,6 +9,7 @@
   const alertaExito = document.querySelector(".form-login .alerta-exito");
   let savedUser = "";
 
+  //llamamos a los elementos guardados del local storage
   const usuariosGuardados = JSON.parse(localStorage.getItem("registro")) || [];
   const inputPassWord = document.getElementById("inputPass");
   const inputMail = document.getElementById("inputEmail");
@@ -14,11 +17,13 @@
   const emailRegex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
   const passwordRegex = /^.{4,12}$/;
   
+  // validamos si los campos son correctos
   const estadoValidacionCampos = {
     userEmail: false,
     userPassword: false,
   };
   
+  // usuario encontrado, almacena el nombre y se establece la bandera
   document.addEventListener("DOMContentLoaded", () => {
     formLogin.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -39,6 +44,7 @@
       enviarFormulario();
     });
   
+  
     inputEmail.addEventListener("input", () => {
       validarCampo(emailRegex,inputEmail,"El correo solo puede contener letras, números, puntos, guiones y guíon bajo.");
     });
@@ -48,6 +54,7 @@
     });
   });
   
+  //si eo campo coicide se eliminan alertas y es valido, sino error
   function validarCampo(regularExpresion, campo, mensaje) {
     const validarCampo= regularExpresion.test(campo.value);
     if (validarCampo) {
@@ -74,6 +81,7 @@
   
     if (alerta) alerta.remove();
   }
+  
   
   function enviarFormulario() {
     //VALIDAMOS EL ENVIO DE NUESTRO FORMULARIO
