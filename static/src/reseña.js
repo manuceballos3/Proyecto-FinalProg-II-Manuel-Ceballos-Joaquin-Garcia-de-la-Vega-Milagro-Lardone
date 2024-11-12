@@ -6,19 +6,7 @@ const contenedorResenas = document.getElementById("reseñas");
 
 // Cargar datos de localStorage
 function cargarDatos() {
-    const calificacionGuardada = localStorage.getItem("calificacion");
     const resenasGuardadas = JSON.parse(localStorage.getItem("resenas")) || [];
-
-    // Si calificacion existe establecer valores y estrellas
-    if (calificacionGuardada) {
-        valoracion.innerText = calificacionGuardada;
-        estrellas.forEach((estrella, index) => {
-            estrella.classList.remove("uno", "dos", "tres", "cuatro", "cinco", "seleccionada");
-            if (index < calificacionGuardada) {
-                estrella.classList.add(obtenerClaseColorEstrella(calificacionGuardada));
-            }
-        });
-    }
 
     //Recorrer arreglo para cargar y mostrar las reseñas guardadas
     resenasGuardadas.forEach(resena => {
@@ -68,6 +56,8 @@ botonEnviar.addEventListener("click", () => {
         const resenasGuardadas = JSON.parse(localStorage.getItem("resenas")) || [];
         resenasGuardadas.push({ valor: valorUsuario, texto: resena });
         localStorage.setItem("resenas", JSON.stringify(resenasGuardadas));
+
+        //window.localStorage.removeItem('resenas');
 
         // Reiniciar el formulario
         textoResena.value = "";
