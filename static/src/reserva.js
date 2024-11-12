@@ -33,11 +33,11 @@ function reservar() {
 
   // Validaciones
   if (reserva.value === "") {
-    alert("Debe completar su nombre y apellido para hacer una reserva.");
+    alert("Debe completar su nombre y apellido para hacer una reserva");
   } else if (fecha.value === "") {
     alert("Debe completar la fecha y hora para poder hacer una reserva");
-  } else if (cant.value === "") {
-    alert("Debe completar la cantidad de personas para poder hacer una reserva");
+  } else if (cant.value === "" || cant.value > 30) {
+    alert("Ingrese una cantidad de personas válida, máximo 30 personas");
   } else if (bandReserva) {  // Compara bandReserva como booleano
     alert("Usted ya tiene una reserva hecha. Revise la sección 'Tu Reserva'");
   } else {
@@ -60,9 +60,7 @@ function mostrarReservas() {
     reservas = JSON.parse(localStorage.reservas);
   }
   var html = "<h1 style='text-align: center;'>Tu Reserva:</h1>";
-  var num = 0;
   for (let reserva of reservas) {
-    num++;
     html += "<h2> A nombre de " + reserva + "<h2/><br/>";
   }
   divReservas.innerHTML = html;
