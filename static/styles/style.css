@@ -562,3 +562,35 @@ button:hover {
 .reseña p {
     margin: 0;
 }
+
+
+/* Agregado para reservas */
+#formReserva { 
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    background-color: #f6f6f6ab;
+    padding: 10px;
+}
+
+.divReservas{
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-image: url(/static/image/rest4.jpg);
+    height: 100%;
+}
+
+#divReservas{
+    padding: 20px;
+    margin: 10px;
+    height: 100%;
+    width: 50%;
+    background-color: #f6f6f6ab;
+}
+

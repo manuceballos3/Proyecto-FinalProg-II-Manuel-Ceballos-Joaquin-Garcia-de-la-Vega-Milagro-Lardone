@@ -9,7 +9,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href="../static/styles/style.css">
     <link rel="shortcut icon" href="../static/image/LogoRestaurant.jpeg">
     <script src="https://kit.fontawesome.com/f08f817e21.js" crossorigin="anonymous"></script>
-    <script src='main.js'></script>
+    <script src="../static/src/reserva.js"></script>
 </head>
 
 <body>
@@ -36,9 +36,27 @@
         </div>
     </div>
 
+<div class="divReservas">
 
-    <h1>reservas</h1>
+    <h2>Reservá tu mesa</h2><br>
 
+    <form action="" id="formReserva">
+      <label for="">Apellido, Nombre</label>
+      <input type="text" id="reserva"><br>
+      <label for="">Fecha y Hora</label>
+      <input type="datetime-local" id="fecha"><br>
+      <label for="">Cantidad de personas</label>
+      <input type="number" name="" id="cant" min="1" max="30"><br>
+
+    <div id="botones">
+      <Button id="btnReserva">Reservar</Button>
+      <button id="btnAnterior">Anular Reserva</button>
+    </div>
+  </form>
+    <div id="divReservas">
+
+    </div>
+</div>
 
     <!-- FOOTER -->
     <div id="footer">
