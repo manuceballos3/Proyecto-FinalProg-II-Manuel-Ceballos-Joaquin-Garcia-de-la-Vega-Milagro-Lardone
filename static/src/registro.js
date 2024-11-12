@@ -4,6 +4,7 @@ const inputPass = document.querySelector('.form-register input[type="password"]'
 const inputEmail = document.querySelector('.form-register input[type="email"]');
 const alertaError = document.querySelector(".form-register .alerta-error");
 const alertaExito = document.querySelector(".form-register .alerta-exito");
+const usuariosGuardados = JSON.parse(localStorage.getItem("registro")) || [];
 
 const userNameRegex = /^[a-zA-Z0-9\_\-]{4,16}$/;
 export const emailRegex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
@@ -63,13 +64,25 @@ function eliminarAlerta(referencia) {
 
 export function enviarFormulario(form, alertaError,alertaExito) {
   //VALIDAMOS EL ENVIO DE NUESTRO FORMULARIO
-
+  console.log("chau")
   if (estadoValidacionCampos.userName && estadoValidacionCampos.userEmail && estadoValidacionCampos.userPassword) {
     //Se agregó estas 3 líneas de código que evitan un error al mostrar las alertas , lo que hacen es resetear los valores del objeto
     estadoValidacionCampos.userName = false;
     estadoValidacionCampos.userEmail = false;
     estadoValidacionCampos.userPassword = false;
-
+    
+    console.log("hola")
+    const token = {
+      user: inputUser.value,
+      password: inputPass.value,
+      email: inputEmail.value
+    }
+  
+    // Guardar la usuario en localStorage
+    const usuariosGuardados = JSON.parse(localStorage.getItem("registro")) || [];
+    usuariosGuardados.push(token);
+    localStorage.setItem("registro", JSON.stringify(usuariosGuardados));
+    
     form.reset();
     alertaExito.classList.add("alertaExito");
     alertaError.classList.remove("alertaError");

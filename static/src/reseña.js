@@ -6,19 +6,19 @@ const contenedorResenas = document.getElementById("reseñas");
 
 // Cargar datos de localStorage
 function cargarDatos() {
-    const calificacionGuardada = localStorage.getItem("calificacion");
+    // const calificacionGuardada = localStorage.getItem("calificacion");
     const resenasGuardadas = JSON.parse(localStorage.getItem("resenas")) || [];
-
+    
     // Si calificacion existe establecer valores y estrellas
-    if (calificacionGuardada) {
-        valoracion.innerText = calificacionGuardada;
-        estrellas.forEach((estrella, index) => {
-            estrella.classList.remove("uno", "dos", "tres", "cuatro", "cinco", "seleccionada");
-            if (index < calificacionGuardada) {
-                estrella.classList.add(obtenerClaseColorEstrella(calificacionGuardada));
-            }
-        });
-    }
+    // if (calificacionGuardada) {
+        //     valoracion.innerText = calificacionGuardada;
+        //     estrellas.forEach((estrella, index) => {
+            //         estrella.classList.remove("uno", "dos", "tres", "cuatro", "cinco", "seleccionada");
+    //         if (index < calificacionGuardada) {
+    //             estrella.classList.add(obtenerClaseColorEstrella(calificacionGuardada));
+    //         }
+    //     });
+    // }
 
     //Recorrer arreglo para cargar y mostrar las reseñas guardadas
     resenasGuardadas.forEach(resena => {
@@ -60,7 +60,7 @@ botonEnviar.addEventListener("click", () => {
         alert("Por favor selecciona una calificación y escribe una reseña antes de enviar.");
         return;
     }
-
+    
     if (valorUsuario > 0) {
         agregarResena(valorUsuario, resena);
 
@@ -68,7 +68,7 @@ botonEnviar.addEventListener("click", () => {
         const resenasGuardadas = JSON.parse(localStorage.getItem("resenas")) || [];
         resenasGuardadas.push({ valor: valorUsuario, texto: resena });
         localStorage.setItem("resenas", JSON.stringify(resenasGuardadas));
-
+        
         // Reiniciar el formulario
         textoResena.value = "";
         valoracion.innerText = "0";
@@ -82,16 +82,17 @@ function obtenerClaseColorEstrella(valor) {
             return "uno";
         case 2:
             return "dos";
-        case 3:
-            return "tres";
-        case 4:
-            return "cuatro";
+            case 3:
+                return "tres";
+                case 4:
+                    return "cuatro";
         case 5:
             return "cinco";
         default:
             return "";
-    }
+        }
 }
 
 // Llamada para cargar los datos al iniciar la página
+
 cargarDatos();
