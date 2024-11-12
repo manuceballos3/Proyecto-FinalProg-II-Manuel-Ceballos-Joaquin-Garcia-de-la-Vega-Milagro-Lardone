@@ -11,7 +11,6 @@ const inputMail = document.getElementById("inputEmail");
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  
   formLogin.addEventListener("submit", (e) => {
       var bandera = false;
       e.preventDefault();

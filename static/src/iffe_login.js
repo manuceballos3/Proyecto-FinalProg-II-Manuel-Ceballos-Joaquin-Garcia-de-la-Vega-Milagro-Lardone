@@ -6,6 +6,10 @@
     const alertaError = document.querySelector(".form-login .alerta-error");
     const alertaExito = document.querySelector(".form-login .alerta-exito");
     
+    const usuariosGuardados = JSON.parse(localStorage.getItem("registro")) || [];
+    const inputPassWord = document.getElementById("inputPass");
+    const inputMail = document.getElementById("inputEmail");
+
     const emailRegex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
     const passwordRegex = /^.{4,12}$/;
     
@@ -16,7 +20,26 @@
     
     document.addEventListener("DOMContentLoaded", () => {
       formLogin.addEventListener("submit", (e) => {
+        var bandera = false;
         e.preventDefault();
+
+        usuariosGuardados.forEach(user => {
+          // console.log(inputMail.value)
+          // console.log(inputPassWord.value)
+          // console.log(user.password)
+          // console.log(user.password == inputPassWord.value)
+          // console.log(user.email == inputMail.value)
+  
+          if(user.password == inputPassWord.value && user.email == inputMail.value){
+            bandera = true;
+            console.log("holaaaaaaaa")
+            estadoValidacionCampos.userName = true;
+            
+          }
+        });
+        if(bandera == false){
+          alert ("este usuario no existe");
+        }
         enviarFormulario();
       });
     
